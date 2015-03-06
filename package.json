@@ -1,0 +1,29 @@
+{
+  "name": "urlconcat",
+  "version": "0.0.1",
+  "description": "Concats paths in an url, places slashes where necessary.",
+  "main": "urlconcat.js",
+  "scripts": {
+    "test": "jshint urlconcat.js & node ./test/urlconcatTest.js",
+    "release": "rm -rf dist & npm-release patch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andersem/urlconcat"
+  },
+  "keywords": [
+    "url",
+    "url-concat",
+    "urlconcat",
+    "concat",
+    "urls"
+  ],
+  "author": "Anders Emil Salvesen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andersem/urlconcat/issues"
+  },
+  "devDependencies": {
+    "npm-release": "0.0.4-3"
+  }
+}
