@@ -1,12 +1,11 @@
 {
   "name": "urlconcat",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Concats paths in an url, places slashes where necessary.",
   "main": "urlconcat.js",
   "scripts": {
     "test": "jshint urlconcat.js & node ./test/urlconcatTest.js",
     "release": "uglifyjs urlconcat.js > urlconcat.min.js & npm-release patch"
-    
   },
   "repository": {
     "type": "git",
