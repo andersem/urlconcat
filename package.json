@@ -5,8 +5,7 @@
   "main": "urlconcat.js",
   "scripts": {
     "test": "jshint urlconcat.js & node ./test/urlconcatTest.js",
-    "release": "minify & npm-release patch",
-    "minify": "uglifyjs urlconcat.js > urlconcat.min.js"
+    "release": "uglifyjs urlconcat.js > urlconcat.min.js & npm-release patch"
     
   },
   "repository": {
