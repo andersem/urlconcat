@@ -12,3 +12,5 @@ target/
 .~lock*#
 atlassian-ide-plugin.xml
 node_modules
+urlconcat.min.js
+.c9
