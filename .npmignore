@@ -12,3 +12,6 @@ target/
 .~lock*#
 atlassian-ide-plugin.xml
 node_modules
+.c9
+test
+
