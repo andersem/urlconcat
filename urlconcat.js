@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  var trailingSlashIfNecessary = function(url) { 
+  var trailingSlashIfNecessary = function(url) {
     return url.substr(-1) !== '/' ? url + '/' : url;
   };
 
@@ -16,7 +16,9 @@
 
   if (typeof define === 'function' && define.amd) {
     define(function() {
-      return urlconcat;
+      return {
+        concat: urlconcat
+      };
     });
   }
   else if (typeof module !== 'undefined' && module.exports) {
