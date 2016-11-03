@@ -1,7 +1,10 @@
 (function() {
   'use strict';
-  var trailingSlashIfNecessary = function(url) {
-    return url.substr(-1) !== '/' ? url + '/' : url;
+  var trailingSlashIfNecessary = function(urlPart, nextUrlPart) {
+    if (nextUrlPart.substr(0, 1) === '?') {
+      return urlPart;
+    }
+    return urlPart.substr(-1) !== '/' ? urlPart + '/' : urlPart;
   };
 
   var urlconcat = function() {
@@ -9,9 +12,10 @@
 
     var concatted = '';
     for (var i = 0; i < args.length - 1; i++) {
-      concatted += trailingSlashIfNecessary(args[i]);
+      concatted += trailingSlashIfNecessary(args[i], args[i+1]);
     }
-    return concatted += args[args.length - 1];
+    concatted += args[args.length - 1];
+    return concatted.replace(/([^:]\/)\/+/g, "$1");
   };
 
   if (typeof define === 'function' && define.amd) {
