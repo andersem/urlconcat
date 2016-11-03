@@ -14,8 +14,7 @@ before_deploy:
 deploy:
   provider: npm
   email: andersems@gmail.com
-  api_key:
-    secure: InG4xfrGZXMjh+BKgXse2WTmBwoLpyNBoUao/5NiIPioVBXq19g9b6j/o+Kefft0yB0sgBZD+c/Qru4s1FtoVtuk/j9dnWorf2I/LjJwIdvSK2YB9re1Xss/MnHMWVoP2sJIfF6zDS1wLnoOaPnAsjeuhOzcztj4cl5fs/lNK34=
+  api_key: InG4xfrGZXMjh+BKgXse2WTmBwoLpyNBoUao/5NiIPioVBXq19g9b6j/o+Kefft0yB0sgBZD+c/Qru4s1FtoVtuk/j9dnWorf2I/LjJwIdvSK2YB9re1Xss/MnHMWVoP2sJIfF6zDS1wLnoOaPnAsjeuhOzcztj4cl5fs/lNK34=
   on:
     branch: master
     node: '6.9'
