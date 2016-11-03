@@ -21,7 +21,7 @@ deploy:
     node: '6.9'
 branches:
   except:
-  - "/^build-[0-9a-z\\-]*/"
+    - /^v[0-9]/
 env:
   global:
     secure: UuBc0zADK4MZvia2Dui6vxx4d6wIWUp/7bL4iAIajxqpzPUr+PgfztV7r11N8So2W/xNn4g/QiAlDDHSW/ilNhEcQr1KCFE3SO2yQDOBXlrr/X8faWU38J6Q0tcBHM1RLtdAjY9jir62WOl+IGfSdSLGAo/TwjtuCUKysBiAlsA=
