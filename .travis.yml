@@ -1,13 +1,16 @@
 language: node_js
 node_js:
-- node
-- '6'
-- '6.1'
-- '5.11'
-- '0.12'
-- '0.10'
+  - 'node'
+  - '6'
+  - '6.1'
+  - '5.11'
+  - '0.12'
+  - '0.10'
+after_script:
+  - git config credential.helper "store --file=.git/credentials"
+  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 before_deploy:
-- npm run release
+  - npm run release
 deploy:
   provider: npm
   api_key:
