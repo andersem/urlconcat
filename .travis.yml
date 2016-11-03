@@ -6,10 +6,16 @@ node_js:
 - '5.11'
 - '0.12'
 - '0.10'
-before_deploy: 'npm run release'
+before_deploy:
+- 'git config --global user.email "andersems@gmail.com"'
+- 'git config --global user.name "Anders Emil Salvesen"'
+- 'npm run release'
 deploy:
   provider: npm
   api_key:
     secure: InG4xfrGZXMjh+BKgXse2WTmBwoLpyNBoUao/5NiIPioVBXq19g9b6j/o+Kefft0yB0sgBZD+c/Qru4s1FtoVtuk/j9dnWorf2I/LjJwIdvSK2YB9re1Xss/MnHMWVoP2sJIfF6zDS1wLnoOaPnAsjeuhOzcztj4cl5fs/lNK34=
   on:
     branch: master
+branches:
+  except:
+    - /^build-[0-9a-z\-]*/
