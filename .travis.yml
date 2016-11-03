@@ -25,7 +25,6 @@ deploy:
   api_key:
     secure: H9dXujblZDaZ3BNwvPp/rwAT+g9de/pyVlchdNEFrUIQPOMb/ECU8CUuc0InAEb09nx8NBgFCMNfa6sJ+YAntYIxdMw/X4qOqA82eNgpvp/EhBSDHRkNeIxZNzbTVN1DaVLiwIbdA6Q7hiu6lY2C93RCaN37sw7e9IUv5BCtKbI=
   on:
-    tags: true
     repo: andersem/urlconcat
     branch: master
     node: '6.9'
