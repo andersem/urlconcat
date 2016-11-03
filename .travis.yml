@@ -1,26 +1,27 @@
 language: node_js
 node_js:
-  - 'node'
-  - '6.9'
-  - '5.11'
-  - '0.12'
-  - '0.10'
+- node
+- '6.9'
+- '5.11'
+- '0.12'
+- '0.10'
 before_deploy:
-  - git config --global user.email "andersems@gmail.com"
-  - git config --global user.name "Anders Emil Salvesen"
-  - git config credential.helper "store --file=.git/credentials"
-  - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
-  - npm run release
+- git config --global user.email "andersems@gmail.com"
+- git config --global user.name "Anders Emil Salvesen"
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
+- npm run release
 deploy:
   provider: npm
   email: andersems@gmail.com
-  api_key: InG4xfrGZXMjh+BKgXse2WTmBwoLpyNBoUao/5NiIPioVBXq19g9b6j/o+Kefft0yB0sgBZD+c/Qru4s1FtoVtuk/j9dnWorf2I/LjJwIdvSK2YB9re1Xss/MnHMWVoP2sJIfF6zDS1wLnoOaPnAsjeuhOzcztj4cl5fs/lNK34=
+  api_key:
+    secure: U+1nFTW798/I+d6mDx+4qsnzuKZWktPQa+bDYleRaY8B4rNMsw8HHZz2Orj9YHG8NR3YvbDX/QoUqaRoWI+wQwVEuOaTfT+bWIn7MtdhPFJIYlYgXI2Xt1a40rfSZUg1m7frAjTbhX1f0ejaXmR5H7YyxQMFYbA43EC8RAt00jI=
   on:
     branch: master
     node: '6.9'
 branches:
   except:
-    - /^v[0-9]/
+  - "/^v[0-9]/"
 env:
   global:
-    secure: UuBc0zADK4MZvia2Dui6vxx4d6wIWUp/7bL4iAIajxqpzPUr+PgfztV7r11N8So2W/xNn4g/QiAlDDHSW/ilNhEcQr1KCFE3SO2yQDOBXlrr/X8faWU38J6Q0tcBHM1RLtdAjY9jir62WOl+IGfSdSLGAo/TwjtuCUKysBiAlsA=
+  - secure: UuBc0zADK4MZvia2Dui6vxx4d6wIWUp/7bL4iAIajxqpzPUr+PgfztV7r11N8So2W/xNn4g/QiAlDDHSW/ilNhEcQr1KCFE3SO2yQDOBXlrr/X8faWU38J6Q0tcBHM1RLtdAjY9jir62WOl+IGfSdSLGAo/TwjtuCUKysBiAlsA=
