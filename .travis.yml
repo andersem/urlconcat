@@ -1,7 +1,7 @@
 language: node_js
 node_js:
   - 'node'
-  - '6.9.0'
+  - '6.9'
   - '5.11'
   - '0.12'
   - '0.10'
@@ -18,7 +18,7 @@ deploy:
     secure: InG4xfrGZXMjh+BKgXse2WTmBwoLpyNBoUao/5NiIPioVBXq19g9b6j/o+Kefft0yB0sgBZD+c/Qru4s1FtoVtuk/j9dnWorf2I/LjJwIdvSK2YB9re1Xss/MnHMWVoP2sJIfF6zDS1wLnoOaPnAsjeuhOzcztj4cl5fs/lNK34=
   on:
     branch: master
-    node: '6.9.0'
+    node: '6.9'
 branches:
   except:
   - "/^build-[0-9a-z\\-]*/"
