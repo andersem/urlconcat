@@ -5,6 +5,8 @@ node_js:
 - '5.11'
 - '0.12'
 - '0.10'
+install:
+- git fetch --unshallow
 before_deploy:
 - git config --global user.email "andersems@gmail.com"
 - git config --global user.name "Anders Emil Salvesen"
