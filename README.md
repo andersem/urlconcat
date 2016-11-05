@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/andersem/urlconcat.svg?branch=master)](https://travis-ci.org/andersem/urlconcat)
+
 # urlconcat
 Concats paths in an url, places slashes where necessary.
 
