@@ -9,10 +9,12 @@ before_deploy:
 - git config --global user.email "andersems@gmail.com"
 - git config --global user.name "Anders Emil Salvesen"
 - git config credential.helper "store --file=.git/credentials"
+- git config --global push.default matching
 - echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 - npm run release
-- git push origin master
+- git status
+- git push
 branches:
   except:
   - "/^v[0-9]/"
