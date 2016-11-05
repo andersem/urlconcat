@@ -22,6 +22,7 @@ env:
   global:
   - secure: UuBc0zADK4MZvia2Dui6vxx4d6wIWUp/7bL4iAIajxqpzPUr+PgfztV7r11N8So2W/xNn4g/QiAlDDHSW/ilNhEcQr1KCFE3SO2yQDOBXlrr/X8faWU38J6Q0tcBHM1RLtdAjY9jir62WOl+IGfSdSLGAo/TwjtuCUKysBiAlsA=
 deploy:
+  skip_cleanup: true
   provider: npm
   email: andersems@gmail.com
   api_key:
