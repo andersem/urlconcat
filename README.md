@@ -11,23 +11,38 @@ npm install urlconcat --save
 
 ## Usage
 
-### CommonJS
+### Importing
+All these methods work:
 ```javascript
 var urlconcat = require('urlconcat');
-urlconcat.concat('http://localhost:8080/', 'search', 'something'); // 'http://localhost:8080/search/something'
+var concat = urlconcat.concat;
 ```
 
-### ES2015
-
-```javascript
+```javacript
 import urlconcat from 'urlconcat';
-urlconcat.concat('http://localhost:8080/', 'search', 'something'); // 'http://localhost:8080/search/something'
+const concat = urlconcat.concat;
 ```
-
-or 
 
 ```javascript
 import { concat } from 'urlconcat';
-concat('http://localhost:8080/', 'search', 'something'); // 'http://localhost:8080/search/something'
 ```
 
+### Using
+
+It will place slashes between url parts, but not before query parameters:
+```javascript
+concat('http://localhost:8080/', 'api/search', 'something', '?a=b&b=c'); 
+// 'http://localhost:8080/api/search/something?a=b&b=c'
+```
+
+It will remove double slashes:
+```javascript
+concat('http://localhost:8080/', '/search')
+// 'http://localhost:8080/search
+```
+
+It will leave trailing slashes:
+```javascript
+concat('http://localhost:8080/', 'search/')
+// 'http://localhost:8080/search
+```

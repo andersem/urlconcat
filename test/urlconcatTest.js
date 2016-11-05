@@ -17,6 +17,11 @@ buster.testCase("urlconcat", {
       'http://localhost:8080/search/something');
   },
 
+  'should leave slash in url part': function () {
+    assert.equals(urlconcat.concat('http://localhost:8080/', 'search/something'),
+      'http://localhost:8080/search/something');
+  },
+
   'should omit double slashes': function () {
     assert.equals(urlconcat.concat('http://localhost:8080/', '/search/', '/something'),
       'http://localhost:8080/search/something');
