@@ -44,5 +44,5 @@ concat('http://localhost:8080/', '/search')
 It will leave trailing slashes:
 ```javascript
 concat('http://localhost:8080/', 'search/')
-// 'http://localhost:8080/search
+// 'http://localhost:8080/search/
 ```
