@@ -1,6 +1,6 @@
 {
   "name": "urlconcat",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Concats paths in an url, places slashes where necessary.",
   "main": "urlconcat.js",
   "scripts": {
